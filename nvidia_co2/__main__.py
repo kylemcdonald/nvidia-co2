@@ -1,7 +1,6 @@
 #!/usr/bin/env python
-
+from __future__ import print_function
 import time
-import numpy as np
 import subprocess
 import shelve
 import os
@@ -91,7 +90,7 @@ def convert_watts(watts, mode):
         gco2eqph = watts_to_gco2eqph(watts)
         ratio, suffix = gco2eq_units[mode]
         amount = gco2eqph * ratio
-    return f'{amount:0.2f}' + suffix
+    return '{:0.2f}'.format(amount) + suffix
 
 def nvidia_co2(mode):
     watts = cpu_watts() + gpu_watts()
