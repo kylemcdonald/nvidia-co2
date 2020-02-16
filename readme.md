@@ -9,7 +9,7 @@ This script doesn't take into account:
 - Carbon intensity changes with time of day.
 - Some datacenters are [offset with carbon credits](https://cloud.google.com/sustainability). 
 
-When running the first time at an IP address, the script will geolocate your IP address and estimate the local carbon intensity. This information will be cached between runs in `/tmp/nvidia-co2-cache.(dir|bak|dat)`. The first run might take 1 second, subsequent runs should take 200ms.
+When running the first time at an IP address, the script will geolocate your IP address and estimate the local carbon intensity. This information will be cached between runs in `/tmp/nvidia-co2-cache.(dir|bak|dat)`. The first run might take 1 second, additional runs should take 200ms.
 
 ## Install
 
