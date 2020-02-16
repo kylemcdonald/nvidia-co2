@@ -2,12 +2,13 @@
 
 Show gCO2eq emissions information with nvidia-smi, at the top right corner. For example: **79.2gCO2eq/h** or **23.76mm^2/h sea ice**.
 
-Built with [experiment-impact-tracker](https://github.com/Breakend/experiment-impact-tracker), which can be used to monitor and report on longer-running experiments.
+Copies code from [experiment-impact-tracker](https://github.com/Breakend/experiment-impact-tracker) for mapping geolocations to energy usage, which can be used to monitor and report on longer-running experiments.
 
 This script doesn't take into account:
 
 - Carbon intensity changes with time of day.
-- Some datacenters are [offset with carbon credits](https://cloud.google.com/sustainability). 
+- Datacenters often have unique energy sources. `experiment-impact-tracker` tracks this information, and it can be accessed with their `scripts/lookup-cloud-region-info`. I would be happy to add this info if the script can automatically detect the provider and region, possibly from the IP address.
+- The state of California has more detailed information available via [California ISO](http://www.caiso.com/Pages/default.aspx) and this script does not use that data.
 
 When running the first time at an IP address, the script will geolocate your IP address and estimate the local carbon intensity. This information will be cached between runs in `/tmp/nvidia-co2-cache.(dir|bak|dat)`. The first run might take 1 second, additional runs should take 200ms.
 

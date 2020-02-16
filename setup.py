@@ -9,7 +9,8 @@ setup(
     license='MIT',
     packages=['nvidia_co2'],
     install_requires=[
-        'experiment_impact_tracker'
+        'shapely',
+        'geocoder'
     ],
     entry_points={
         'console_scripts': [

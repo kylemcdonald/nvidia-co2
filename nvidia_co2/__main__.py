@@ -44,9 +44,9 @@ def public_ip():
 @shelve_it(os.path.expanduser('/tmp/nvidia-co2-cache'))
 def get_carbon_intensity_by_ip(ip):
     import geocoder
-    from experiment_impact_tracker.emissions import get_region_metrics
+    from .metrics import get_zone_information_by_coords
     g = geocoder.ip(ip)
-    zone_name, zone_info = get_region_metrics.get_zone_information_by_coords((g.y, g.x))
+    zone_name, zone_info = get_zone_information_by_coords((g.y, g.x))
     return zone_info['carbonIntensity']
 
 def get_carbon_intensity():
