@@ -1,6 +1,6 @@
 # nvidia-co2
 
-Show gCO2eq emissions information with nvidia-smi.
+Show gCO2eq emissions information with nvidia-smi, at the top right corner. For example: **79.2gCO2eq/h** or **23.76mm^2/h sea ice**.
 
 Built with [experiment-impact-tracker](https://github.com/Breakend/experiment-impact-tracker), which can be used to monitor and report on longer-running experiments.
 
