@@ -2,8 +2,6 @@
 
 Show gCO2eq emissions information with nvidia-smi.
 
-Install with `pip install git+https://github.com/kylemcdonald/nvidia-co2.git`
-
 Built with [experiment-impact-tracker](https://github.com/Breakend/experiment-impact-tracker), which can be used to monitor and report on longer-running experiments.
 
 This script doesn't take into account:
@@ -11,7 +9,11 @@ This script doesn't take into account:
 - Carbon intensity changes with time of day.
 - Some datacenters are [offset with carbon credits](https://cloud.google.com/sustainability). 
 
-When running the first time at a new IP address, the script will geolocate your IP address and estimate the local carbon intensity. This information will be cached between runs in `/tmp/nvidia-co2-cache.(dir|bak|dat)`.
+When running the first time at an IP address, the script will geolocate your IP address and estimate the local carbon intensity. This information will be cached between runs in `/tmp/nvidia-co2-cache.(dir|bak|dat)`. The first run might take 1 second, subsequent runs should take 200ms.
+
+## Install
+
+`pip install git+https://github.com/kylemcdonald/nvidia-co2.git`
 
 ## Example
 

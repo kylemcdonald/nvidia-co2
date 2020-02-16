@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='nvidia-co2',
     version='0.1.0',
-    description='Show gCO2eq emissions information with nvidia-smi',
+    description='Show gCO2eq emissions information with nvidia-smi.',
     url='https://github.com/kylemcdonald/nvidia-co2',
     author='Kyle McDonald',
     license='MIT',
