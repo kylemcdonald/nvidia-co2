@@ -8,8 +8,11 @@ import argparse
 
 def cpu_uj_total():
     fn = '/sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj'
-    with open(fn) as f:
-        return int(f.read())
+    try:
+        with open(fn) as f:
+            return int(f.read())
+    except FileNotFoundError:
+        return 0
     
 def cpu_watts(sample_time=0.01):
     start = cpu_uj_total()
