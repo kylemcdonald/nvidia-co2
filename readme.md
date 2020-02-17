@@ -13,6 +13,8 @@ This script doesn't take into account:
 
 When running the first time at an IP address, the script will geolocate your IP address and estimate the local carbon intensity. This information will be cached between runs in `/tmp/nvidia-co2-cache.(dir|bak|dat)`. The first run might take 1 second, additional runs should take 200ms.
 
+This script won't work by default on Google Cloud because I'm using `dig` to quickly get a public IP address. Permissions are also set up in a way where you would need to install it to `--user` and call `python -m nvidia-co2` or similar. But with a little work it could be done :)
+
 ## Install
 
 `pip install git+https://github.com/kylemcdonald/nvidia-co2.git`
