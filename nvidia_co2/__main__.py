@@ -25,7 +25,8 @@ def cpu_watts(sample_time=0.01):
 def gpu_watts():
     with os.popen('nvidia-smi --query-gpu=power.draw --format=csv,noheader,nounits') as f:
         output = f.read()
-    watts = sum([float(e) for e in output.splitlines()])
+    watts = sum([float(e) for e in output.splitlines()
+                 if e != '[Not Supported]'])
     return watts
 
 def shelve_it(file_name):
