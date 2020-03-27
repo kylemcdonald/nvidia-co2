@@ -2,7 +2,6 @@
 # modified slightly to decrease dependencies
 
 import os
-import numpy as np
 import json
 from shapely.geometry import shape
 
