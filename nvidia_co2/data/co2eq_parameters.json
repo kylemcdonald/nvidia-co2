@@ -1152,6 +1152,12 @@
       "fossilFuelRatio": 0.9814972648507905,
       "renewableRatio": 0.01850273514920954
     },
+    "IS": {
+      "_source": "https://px.hagstofa.is/pxen/pxweb/en/Atvinnuvegir/Atvinnuvegir__orkumal/IDN02101.px/table/tableViewLayout1/?rxid=ac036f11-e958-447c-8b2f-cc40114d8f46",
+      "carbonIntensity": 2.8,
+      "fossilFuelRatio": 0.01,
+      "renewableRatio": 0.99
+    },
     "IT-CNO": {
       "_source": "https://github.com/tmrowco/electricitymap-contrib/blob/master/config/co2eq_parameters.json (ElectricityMap Average, 2019)",
       "carbonIntensity": 300.90034666135455,
