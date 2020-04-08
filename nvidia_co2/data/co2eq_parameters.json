@@ -882,6 +882,10 @@
       "fossilFuelRatio": 0.8799360987239259,
       "renewableRatio": 0.12006390127607419
     },
+    "CN": {
+      "_source": "average of national cenarios from Li, Chalvatzis, Pappas (2017) (https://doi.org/10.1016/j.egypro.2017.12.421)",
+      "carbonIntensity": 841.0
+    },
     "CR": {
       "_source": "https://github.com/tmrowco/electricitymap-contrib/blob/master/config/co2eq_parameters.json (ElectricityMap Average, 2019)",
       "carbonIntensity": 60.81389637479634,
